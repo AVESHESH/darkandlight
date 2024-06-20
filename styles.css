@@ -1,0 +1,103 @@
+:root {
+    --background-color-light: #ffffff;
+    --background-color-dark: #121212;
+    --text-color-light: #000000;
+    --text-color-dark: #ffffff;
+    --navbar-color-light: #f8f9fa;
+    --navbar-color-dark: #1f1f1f;
+    --card-background-light: #ffffff;
+    --card-background-dark: #333333;
+}
+
+body.light {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+body.dark {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--navbar-color-light);
+}
+
+body.dark .navbar {
+    background-color: var(--navbar-color-dark);
+}
+
+.navbar a {
+    color: inherit;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+    background-color: var(--card-background-light);
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+body.dark .carousel-item {
+    background-color: var(--card-background-dark);
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.card {
+    background-color: var(--card-background-light);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .card {
+    background-color: var(--card-background-dark);
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--navbar-color-light);
+}
+
+body.dark .footer {
+    background-color: var(--navbar-color-dark);
+}
